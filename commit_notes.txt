@@ -4,3 +4,4 @@
 "// Commit 4: Implemented DTOs to avoid sensitive data exposure" 
 "// Commit 5: Added rate limiting to prevent brute-force attacks" 
 "// Commit 6: Prevented mass assignment vulnerabilities" 
+"// Commit 7: Hardened JWT handling with strong keys and validation" 

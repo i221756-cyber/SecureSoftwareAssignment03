@@ -1,1 +1,2 @@
 "// Commit 1: Password hashing implemented" 
+"// Commit 2: Enforced role-based access control" 

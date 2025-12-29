@@ -1,24 +1,35 @@
 pipeline {
+    agent any
 
-agent any
-stages {
-stage('Build') {
-steps {
-echo 'Building..'
-// Here you can define commands for your build
-}
-}
-stage('Test') {
-steps {
-echo 'Testing..'
-// Here you can define commands for your tests
-}
-}
-stage('Deploy') {
-steps {
-echo 'Deploying....'
-// Here you can define commands for your deployment
-}
-}
-}
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+
+    post {
+        always {
+            // This runs no matter what (success or failure)
+            echo 'Post build condition'
+        }
+
+        failure {
+            // This runs only if the build fails
+            echo 'Post action if build fails'
+        }
+    }
 }
